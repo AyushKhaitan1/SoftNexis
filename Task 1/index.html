@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush Khaitan | Portfolio</title>
+    <title>Ayush Khaitan | Full-Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">Ayush Khaitan</div>
+        <div class="logo">AK.</div>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -16,32 +17,61 @@
         </ul>
     </nav>
     <main>
-        <section class="hero">
-            <h1>Building Modern Web Experiences</h1>
-            <p>Full-Stack Developer (MERN) | 3rd Year B.Tech at SRMIST</p>
-            <a href="#projects" class="btn-primary">View My Work</a>
+        <section class="hero animate-up">
+            <div class="hero-content">
+                <span class="badge">Available for Internships</span>
+                <h1>Hi, I'm Ayush Khaitan.</h1>
+                <p class="subtitle">I engineer modern, scalable web applications with the MERN stack and solve complex problems with Java.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">Explore My Work</a>
+                    <a href="contact.html" class="btn-secondary">Get in Touch</a>
+                </div>
+            </div>
         </section>
-        <section id="projects" class="projects-section">
-            <h2>Featured Projects</h2>
+
+        <section id="projects" class="projects-section animate-up" style="animation-delay: 0.2s;">
+            <div class="section-header">
+                <h2>Featured Engineering</h2>
+                <p>A selection of my recent full-stack and machine learning projects.</p>
+            </div>
             <div class="projects">
                 <div class="card">
-                    <h3>Project Wanderlust</h3>
-                    <p>A comprehensive travel booking website built from scratch using web development technologies.</p>
-                    <span class="tech-tag">Full-Stack</span>
+                    <div class="card-content">
+                        <h3>Project Wanderlust</h3>
+                        <p>A comprehensive, end-to-end travel booking architecture built entirely from scratch with robust web technologies.</p>
+                        <div class="tags">
+                            <span class="tech-tag">Full-Stack</span>
+                            <span class="tech-tag">Web Dev</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="card">
-                    <h3>AI Healthcare Chatbot</h3>
-                    <p>Intelligent diagnostic tool using a Random Forest Classifier and Python Streamlit.</p>
-                    <span class="tech-tag">Machine Learning</span>
+                    <div class="card-content">
+                        <h3>AI Healthcare Chatbot</h3>
+                        <p>An intelligent diagnostic interface powered by a Random Forest Classifier, seamlessly deployed via Python Streamlit.</p>
+                        <div class="tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="card">
-                    <h3>OSCI Contributions</h3>
-                    <p>Open-source development for KiddieGPT and HR Roadways navigation components.</p>
-                    <span class="tech-tag">Open Source</span>
+                    <div class="card-content">
+                        <h3>OSCI Contributions</h3>
+                        <p>Shipped production-ready open-source UI components, including dynamic navigation and dark theme integrations for KiddieGPT.</p>
+                        <div class="tags">
+                            <span class="tech-tag">Open Source</span>
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer><p>&copy; 2026 Ayush Khaitan | Soft Nexis Task 1</p></footer>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Ayush Khaitan. Engineered for the modern web.</p>
+        </div>
+    </footer>
 </body>
 </html>

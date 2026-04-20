@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Ayush Khaitan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">Ayush Khaitan</div>
+        <div class="logo">AK.</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
-    <main class="container">
-        <h2>Contact Me</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" rows="5"></textarea>
-            <button type="submit" class="btn-primary">Send</button>
-        </form>
+    <main class="container animate-up">
+        <div class="section-header">
+            <h2>Let's Connect</h2>
+            <p>Looking for a developer to join your team or collaborate on a project?</p>
+        </div>
+        <div class="contact-wrapper">
+            <form class="contact-form card">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Message</label>
+                    <textarea placeholder="How can we work together?" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
     </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Ayush Khaitan. Engineered for the modern web.</p>
+        </div>
+    </footer>
 </body>
 </html>
