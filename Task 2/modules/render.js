@@ -8,11 +8,7 @@ export function renderTaskList(taskListElement, tasks, filter = 'all') {
     if (filter === 'completed') filteredTasks = tasks.filter(t => t.completed);
 
     if (filteredTasks.length === 0) {
-        taskListElement.innerHTML = 
-            <div class="empty-state">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                <p>No tasks found. You're all caught up!</p>
-            </div>;
+        taskListElement.innerHTML = '<div class="empty-state" style="text-align:center; padding:2rem; color:#64748b;">No tasks found. You are all caught up!</div>';
         return;
     }
 
@@ -21,18 +17,13 @@ export function renderTaskList(taskListElement, tasks, filter = 'all') {
         li.className = 'task ' + (task.completed ? 'completed' : '');
         li.dataset.id = task.id;
         
-        li.innerHTML = 
-            <label class="task-label">
-                <div class="checkbox-wrapper">
-                    <input type="checkbox" class="status-toggle"  + (task.completed ? 'checked' : '') + >
-                    <span class="custom-checkbox"></span>
-                </div>
-                <span class="task-text"> + escapeHTML(task.text) + </span>
+        li.innerHTML = `
+            <label class="task-label" style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                <input type="checkbox" class="status-toggle" ${task.completed ? 'checked' : ''} style="cursor:pointer; width:18px; height:18px;">
+                <span class="task-text" style="${task.completed ? 'text-decoration:line-through; color:#94a3b8;' : ''}">${escapeHTML(task.text)}</span>
             </label>
-            <button class="delete-btn" aria-label="Delete">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-            </button>
-        ;
+            <button class="delete-btn" aria-label="Delete" style="background:none; border:none; cursor:pointer; font-size:1.2rem;">🗑️</button>
+        `;
         taskListElement.appendChild(li);
     });
 }
